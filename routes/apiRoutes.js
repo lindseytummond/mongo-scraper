@@ -10,19 +10,18 @@ var cheerio = require("cheerio");
 
 module.exports = function (app) {
 
-    // GET route for scraping website
+    // A GET route for scraping the USA Today website
     app.get("/scrape", function (req, res) {
-        // grab the body of the html with axios
-        axios.get("https://www.powerball.com/winner-stories")
+        // First, we grab the body of the html with axios
+        axios.get("https://www.reuters.com/news/world")
             .then(function (response) {
-                //load info into cheerio and save it to $ for a shorthand selector
+                // Then, we load that into cheerio and save it to $ for a shorthand selector
                 var $ = cheerio.load(response.data);
                 $(".FeedItem_item").each(function (i, element) {
                     // Save an empty result object
                     var result = {};
 
-                    // Add the text and href of every link, 
-                    // and save them as properties of the result object
+                    // Add the text and href of every link, and save them as properties of the result object
 
                     result.title = $(this)
                         .find("h2 a")
@@ -74,7 +73,7 @@ module.exports = function (app) {
 
 
     // Route for saving articles
-    app.post("/articlessave/:id", function (req, res) {
+    app.post("/articlessav/:id", function (req, res) {
         // Using the id passed in the id parameter, prepare a query that finds the matching one in our db...
         db.Article.updateOne({ _id: req.params.id }, { $set: { "saved": "1" } })
             .then(function (dbArticle) {
@@ -87,7 +86,7 @@ module.exports = function (app) {
     });
 
     // Route for deleting a single article
-    app.get("/articlesdelete/:id", function (req, res) {
+    app.get("/articlesdel/:id", function (req, res) {
         // Using the id passed in the id parameter, prepare a query that finds the matching one in our db...
         db.Article.deleteOne({ _id: req.params.id })
             .then(function (dbArticle) {
@@ -100,7 +99,7 @@ module.exports = function (app) {
     });
 
     // Route for deleting all unsaved article
-    app.get("/articlesdelete", function (req, res) {
+    app.get("/articlesdel", function (req, res) {
         // Using the id passed in the id parameter, prepare a query that finds the matching one in our db...
         db.Article.deleteMany({ "saved": "0" })
             .then(function (dbArticle) {
@@ -148,7 +147,7 @@ module.exports = function (app) {
 
 
     // Route for saving articles
-    app.post("/notesaved/:id", function (req, res) {
+    app.post("/notesav/:id", function (req, res) {
         // Using the id passed in the id parameter, prepare a query that finds the matching one in our db...
         console.log(req.body)
         db.Note.update({ _id: req.body.id }, 
@@ -163,7 +162,7 @@ module.exports = function (app) {
     });
 
     // Route for deleting a single article
-    app.get("/notedelete/:id", function (req, res) {
+    app.get("/notedel/:id", function (req, res) {
         // Using the id passed in the id parameter, prepare a query that finds the matching one in our db...
         db.Note.deleteOne({ _id: req.params.id })
             .then(function (dbNote) {

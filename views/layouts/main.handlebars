@@ -4,43 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mongo Scraper</title>
-
+    <title>Reuters Mongo Scrape</title>
+    <!-- Materialize CSS and Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- My CSS -->
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
 </head>
 
 <body>
 
-    {{!-- <div class="container">
-    <br/>
-    </div> --}}
+    <div class="container">
+        <br />
+    </div>
     <div class="container">
 
         {{{ body }}}
 
     </div>
-
     <div class="container">
-        <br/>
+        <br />
     </div>
-
     <div class="container">
         <footer class="page-footer teal darken-2 z-depth-4">
             <div class="footer-copyright teal darken-4">
-                {{!-- <div class="container center">
-                    &copy; Copyright 2020 Lindsey Tummond
-                </div> --}}
+                <div class="container center">
+                   
+                </div>
             </div>
         </footer>
     </div>
-
-    
+    <!-- jQuery, javascript file for the Bootstrap's javascript file to function -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Matererialize -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="assets/js/app.js"></script>
-
+    <!-- My JS file -->
+    <script src="assets/js/scraper.js"></script>
     <script>
         $(document).ready(function () {
             $('.sidenav').sidenav();
