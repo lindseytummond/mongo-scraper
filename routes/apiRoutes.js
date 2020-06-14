@@ -10,35 +10,49 @@ var cheerio = require("cheerio");
 
 module.exports = function (app) {
 
-    // A GET route for scraping the USA Today website
+    // A GET route for scrapinga website
     app.get("/scrape", function (req, res) {
+        console.log('scrapping!!!!')
         // First, we grab the body of the html with axios
-        axios.get("https://www.reuters.com/finance").then(function (response) {
+        axios.get("https://www.travelandleisure.com/").then(function (response) {
                 // Then, we load that into cheerio and save it to $ for a shorthand selector
                 var $ = cheerio.load(response.data);
 
-                $("article.story").each(function(i, element) {
+                $(".category-page-item").each(function(i, element) {
                     // Save an empty result object
                     var result = {};
-              
+                    
                     // Add the text and href of every link, and save them as properties of the result object
                     result.title = $(this)
-                      .children("a")
-                      .text();
+
+                        .find(".category-page-item-image-text-wrapper")
+                        .text().trim();
+                    
                     result.link = $(this)
-                      .children("a")
-                      .attr("href");
+                      .find("a")
+                      .attr('href');
+                  
+                    
+                    result.img = $(this).
+                        find("div.lazy-image").
+                        attr("data-src")
+
+                    // result.image = $(this)
+                    //     .find("div.inner-container.js-inner-container")
+                    //     .find("img")
+                    //     .attr("src");
+                        console.log(result)
               
-                    // Create a new Article using the `result` object built from scraping
-                    db.Article.create(result)
-                      .then(function(dbArticle) {
-                        // View the added result in the console
-                        console.log(dbArticle);
-                      })
-                      .catch(function(err) {
-                        // If an error occurred, log it
-                        console.log(err);
-                      });
+                    // // Create a new Article using the `result` object built from scraping
+                    // db.Article.create(result)
+                    //   .then(function(dbArticle) {
+                    //     // View the added result in the console
+                    //     console.log(dbArticle);
+                    //   })
+                    //   .catch(function(err) {
+                    //     // If an error occurred, log it
+                    //     console.log(err);
+                    //   });
                 });
 
 
@@ -77,7 +91,7 @@ module.exports = function (app) {
                 res.send("Scrape Successful!");
             }).catch(function (err) {
                 // If an error occurred, send it to the client
-
+                console.log(err)
                 res.json(err);
             });
     });
