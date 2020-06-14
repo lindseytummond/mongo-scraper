@@ -8,7 +8,7 @@ $.getJSON("/articles", function (data) {
         if (data[i].image === undefined) {
           $("#articles")
             .append("<p data-id='" + data[i]._id
-              + "'><img class='z-depth-2' src='https://dummyimage.com/225x150/aaa/fff.png&text=++Reuters++' align='left' 'width='225' hspace='10'/><b><h6 class='teal-text'>"
+              + "'><img class='z-depth-2' src='https://dummyimage.com/225x150/000/fff' align='left' 'width='225' hspace='10'/><b><h6 class='teal-text'>"
               + data[i].title + "</h6></b><a href='"
               + data[i].link + "' target=_blank>"
               + data[i].summary + "</a><br/>"
@@ -33,7 +33,7 @@ $.getJSON("/articles", function (data) {
         if (data[i].image === undefined) {
           $("#articlesaved")
             .append("<p data-id='" + data[i]._id
-              + "'><img class='z-depth-2' src='https://dummyimage.com/225x150/aaa/fff.png&text=++Reuters++' align='left' 'width='225' hspace='10'/><b><h6 class='teal-text'>"
+              + "'><img class='z-depth-2' src='https://dummyimage.com/225x150/000/fff' align='left' 'width='225' hspace='10'/><b><h6 class='teal-text'>"
               + data[i].title + "</h6></b><a href='"
               + data[i].link + "' target=_blank>"
               + data[i].summary + "</a><br/>"

@@ -33,9 +33,9 @@ module.exports = function (app) {
                       .attr('href');
                   
                     
-                    result.img = $(this).
-                        find("div.lazy-image").
-                        attr("data-src")
+                    result.img = $(this)
+                        .find("div.lazy-image")
+                        .attr("data-src")
 
                     // result.image = $(this)
                     //     .find("div.inner-container.js-inner-container")
@@ -54,38 +54,6 @@ module.exports = function (app) {
                     //     console.log(err);
                     //   });
                 });
-
-
-                // $(".FeedItem_item").each(function (i, element) {
-                //     // Save an empty result object
-                //     var result = {};
-
-                //     // Add the text and href of every link, and save them as properties of the result object
-
-                //     result.title = $(this)
-                //         .find("h3 a")
-                //         .text().trim();
-                //     result.link = $(this)
-                //         .find("h3 a")
-                //         .attr("href");
-                //     result.summary = $(this)
-                //         .find(".FeedItemLede_lede")
-                //         .text().trim();
-                //     result.image = $(this)
-                //         .find("span a img")
-                //         .attr("src");
-
-                //     // Create a new Article using the `result` object built from scraping
-                //     db.Article.create(result)
-                //         .then(function (dbArticle) {
-                //             // View the added result in the console
-                //             console.log(dbArticle);
-                //         })
-                //         .catch(function (err) {
-                //             // If an error occurred, log it
-                //             console.log(err);
-                //         });
-                // });
 
                 // Send a message to the client
                 res.send("Scrape Successful!");
