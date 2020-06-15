@@ -36,7 +36,7 @@ $.getJSON("/articles", function (data) {
               + "'><img class='z-depth-2' src='https://dummyimage.com/225x150/000/fff' align='left' 'width='225' hspace='10'/><b><h6 class='teal-text'>"
               + data[i].title + "</h6></b><a href='"
               + data[i].link + "' target=_blank>"
-              + data[i].summary + "</a><br/>"
+              // + data[i].summary + "</a><br/>"
               + "<span class='right'><a data-id='" + data[i]._id + "'data-target='nm' class='btn-flat note waves-effect waves-teal teal-text modal-trigger'><i class='small material-icons'> note_add</i>Add Note</a>&nbsp;<a data-id='" + data[i]._id + "'data-target='nlm' class='btn-flat manage waves-effect waves-indigo indigo-text modal-trigger'><i class='small material-icons'> assignment</i>Manage Notes</a>&nbsp;<a data-id='" + data[i]._id + "'class='btn-flat del waves-effect waves-red red-text'><i class='small material-icons'> delete_forever</i>Delete Article</a></span>"
               + "</p><br clear='left' />"
             );
@@ -48,7 +48,7 @@ $.getJSON("/articles", function (data) {
               + data[i].image + "' align='left' width='225' hspace='10'/><b><h6 class='teal-text'>"
               + data[i].title + "</h6></b><a href='"
               + data[i].link + "' target=_blank>"
-              + data[i].summary + "</a><br/>"
+              // + data[i].summary + "</a><br/>"
               + "<span class='right'><a data-id='" + data[i]._id + "'data-target='nm' class='btn-flat note waves-effect waves-teal teal-text modal-trigger'><i class='small material-icons'> note_add</i>Add Note</a>&nbsp;<a data-id='" + data[i]._id + "'data-target='nlm' class='btn-flat manage waves-effect waves-indigo indigo-text modal-trigger'><i class='small material-icons'> assignment</i>Manage Notes</a>&nbsp;<a data-id='" + data[i]._id + "'class='btn-flat del waves-effect waves-red red-text'><i class='small material-icons'> delete_forever</i>Delete Article</a></span>"
               + "</p><br clear='left' />"
             );

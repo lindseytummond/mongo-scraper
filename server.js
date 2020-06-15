@@ -41,7 +41,7 @@ require("./routes/htmlRoutes")(app);
 const PORT = process.env.PORT || 3000;
 
 // // If deployed, use the depoyed database.  Otherwise, use the local scraper db
-// const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 // // Connect to the Mongo DB
 // mongoose.connect(MONGODB_URI); 
 
