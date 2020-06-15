@@ -31,7 +31,7 @@ module.exports = function (app) {
                         .find("a")
                         .attr('href');
                   
-                    result.img = $(this)
+                    result.image = $(this)
                         .find("div.lazy-image")
                         .attr("data-src")
                         console.log(result)

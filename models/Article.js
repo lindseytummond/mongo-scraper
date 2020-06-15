@@ -14,10 +14,10 @@ var ArticleSchema = new Schema({
     type: String,
     required: false
   },
-  summary: {
-    type: String,
-    required: false
-  },
+  // summary: {
+  //   type: String,
+  //   required: false
+  // },
   image: {
     type: String,
     required: false
