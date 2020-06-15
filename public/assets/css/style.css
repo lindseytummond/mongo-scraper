@@ -10,7 +10,14 @@
     bottom: 0;
     width: 100%;
     text-align: center;
+    z-index: 1;
   }
   .body{
     font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+  }
+
+  #index-banner{
+    background: url(/assets/img/background3.jpg) center;
+    background-size: cover;
   }
