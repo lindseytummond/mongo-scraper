@@ -11,7 +11,7 @@ Lindsey Tummond
 - <a href="https://www.linkedin.com/in/lindsey-tummond-b86aa341/" target="_blank"> LinkedIn </a>
 
 ## Future Enhancements:
-Future developments would include creating additional features to isolate specific subtopics to scrape (ex: 'Destination of the Year', 'Cruises', and 'Travel Tips') to be able to store comments for each travel subtopic.
+Future developments would include creating additional features to isolate specific subtopics to scrape (ex: 'Destination of the Year,' 'Cruises,' and 'Travel Tips') to be able to store comments for each travel subtopic.
 
 ## Learning Points:
 - Trial and error of using axios to isolate specific HTML.
@@ -32,9 +32,9 @@ Future developments would include creating additional features to isolate specif
 
 ## How to Use:
 Use the following link https://infinite-escarpment-80167.herokuapp.com/ to open the application. <br>
-Use the 'Get New Articles' to scrape the Travel + Leisure site. <br>
+Select 'Get New Articles' to scrape the Travel + Leisure site. <br>
 Browse the articles and elect to 'Save Article' or 'Delete Article'. <br>
-Articles you save will be complied under the 'My Saved Articles' tab in the navigation bar. <br>
+Articles a user saves will be complied under 'My Saved Articles' tab in the navigation bar. <br>
 Under 'My Saved Articles,' users have the ability to 'Add Note,' 'Manage Note,' and 'Delete Article' based on preference. <br>
 Lastly, 'Delete Unsaved Articles' will remove all scraped, unsaved articles from view.
 
