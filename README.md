@@ -41,5 +41,5 @@ Lastly, 'Delete Unsaved Articles' will remove all scraped, unsaved articles from
 ## App Example:
 
 <a href="https://infinite-escarpment-80167.herokuapp.com/" target="_blank">
-   <img src="public/assets/img/TL-scraper.png">
+   <img src="public/assets/img/TL-readme.gif">
 </a>
